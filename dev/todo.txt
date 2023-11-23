@@ -6,8 +6,8 @@
 - .. create employees1 page with useEffect spinner
 	- x create employees1 page
 	- x put in loader with useEffect
-	- .. show all employees
-	- put in spinner
+	- x show all employees
+	- .. put in spinner
 	- make single page: PageEmployee for /3, /5
 
 
