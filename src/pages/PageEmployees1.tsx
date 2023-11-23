@@ -15,5 +15,16 @@ export const PageEmployees1 = () => {
 		}, 2000);
 	}, []);
 
-	return <p>There are {employees.length} employees:</p>;
+	return (
+		<>
+			<p>There are {employees.length} employees:</p>
+			{employees.map(employee => {
+				return (
+					<div key={employee.employeeID}>
+						<p>{employee.firstName} {employee.lastName}</p>
+					</div>
+				)
+			})}
+		</>
+	);
 };

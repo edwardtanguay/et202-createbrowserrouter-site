@@ -5,11 +5,20 @@
 
 - .. create employees1 page with useEffect spinner
 	- x create employees1 page
-	- .. put in loader with useEffect
+	- x put in loader with useEffect
+	- .. show all employees
+	- put in spinner
+	- make single page: PageEmployee for /3, /5
+
+
+
 	- good UX with spinner
 	- no cache
 	- no 3x timeout error
+
 - create employees2 page with React Query
 	- good UX with spinner
 	- cache
 	- 3x timeout, returns error
+
+- refactor: getEmployees()
