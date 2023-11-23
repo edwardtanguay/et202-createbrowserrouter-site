@@ -4,7 +4,8 @@
 	- no 3x timeout error
 
 - .. create employees1 page with useEffect spinner
-	- .. create employees1 page
+	- x create employees1 page
+	- .. put in loader with useEffect
 	- good UX with spinner
 	- no cache
 	- no 3x timeout error

@@ -3,3 +3,10 @@ export interface INoun {
 	singular: string;
 	plural: string;
 }
+
+export interface IEmployee {
+	employeeID: number;
+	firstName: string;
+	lastName: string;
+	title: string;
+}
