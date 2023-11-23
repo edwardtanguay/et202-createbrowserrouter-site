@@ -4,6 +4,7 @@ import { PageAbout } from "./pages/PageAbout";
 import { PageWelcome } from "./pages/PageWelcome";
 import { Page404 } from "./pages/Page404";
 import { PageTodos } from "./pages/PageTodos";
+import { PageNouns } from "./pages/PageNouns";
 
 const router = createBrowserRouter([
 	{
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
 						resolve(["eat lunch", "call doctor", "buy books", "create website"])
 					})
 				}
+			},
+			{
+				path: "/nouns",
+				element: <PageNouns />,
 			},
 			{
 				path: "/about",
