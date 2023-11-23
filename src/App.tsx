@@ -1,9 +1,10 @@
 function App() {
-  return (
-    <>
-    <h1>Data-Loading Site</h1>
-    </>
-  )
+	return (
+		<>
+			<h1 className="text-2xl mb-4">Data-Loading Site</h1>
+      <p>skdfjdf</p>
+		</>
+	);
 }
 
-export default App
+export default App;
