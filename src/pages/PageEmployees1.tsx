@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { IEmployee } from "../interfaces";
 import axios from "axios";
+import { ImSpinner7 } from "react-icons/im";
 
 export const PageEmployees1 = () => {
 	const [employees, setEmployees] = useState<IEmployee[]>([]);
@@ -29,7 +30,7 @@ export const PageEmployees1 = () => {
 					})}
 				</>
 			) : (
-				<p>loading...</p>
+				<ImSpinner7 className="text-6xl ml-3 mt-3 animate-spin opacity-50"/>
 			)}
 		</>
 	);
