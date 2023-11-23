@@ -1,9 +1,8 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import { PageAbout } from "./pages/PageAbout";
 import { PageWelcome } from "./pages/PageWelcome";
-import { Page404 } from "./pages/page404";
-
+import { Page404 } from "./pages/Page404";
 
 const router = createBrowserRouter([
 	{
@@ -21,7 +20,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/",
-				element: <PageWelcome />,
+				element: <Navigate to="/welcome"/>
 			},
 		],
 	},
