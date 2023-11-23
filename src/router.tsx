@@ -18,11 +18,11 @@ const router = createBrowserRouter([
 			{
 				path: "/todos",
 				element: <PageTodos />,
-				// loader: async () => {
-				// 	return new Promise((resolve) => {
-				// 		resolve([111,222])
-				// 	})
-				// }
+				loader: async () => {
+					return new Promise((resolve) => {
+						resolve(["eat lunch", "call doctor", "buy books", "create website"])
+					})
+				}
 			},
 			{
 				path: "/about",
