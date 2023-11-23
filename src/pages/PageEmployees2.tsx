@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { IEmployee } from "../interfaces";
 import * as appModel from "../appModel";
 import { Spinner } from "../components/Spinner";
+import { NavLink } from "react-router-dom";
 
 export const PageEmployees2 = () => {
 	const employeesQuery = useQuery<IEmployee[]>({
@@ -24,7 +25,8 @@ export const PageEmployees2 = () => {
 					{employeesQuery.data.map((employee) => {
 						return (
 							<p key={employee.employeeID}>
-								{employee.firstName} {employee.lastName}
+								<NavLink className="underline" to={`/employee/${employee.employeeID}`}>
+								{employee.firstName} {employee.lastName}</NavLink>
 							</p>
 						);
 					})}

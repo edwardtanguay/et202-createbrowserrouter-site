@@ -7,12 +7,13 @@ import { PageTodos } from "./pages/PageTodos";
 import { PageNouns, loader as nounLoader } from "./pages/PageNouns";
 import { PageEmployees1 } from "./pages/PageEmployees1";
 import { PageEmployees2 } from "./pages/PageEmployees2";
+import { PageEmployee } from "./pages/PageEmployee";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <App />,
-		errorElement: <Page404/>,
+		errorElement: <Page404 />,
 		children: [
 			{
 				path: "/welcome",
@@ -23,14 +24,19 @@ const router = createBrowserRouter([
 				element: <PageTodos />,
 				loader: async () => {
 					return new Promise((resolve) => {
-						resolve(["eat lunch", "call doctor", "buy books", "create website"])
-					})
-				}
+						resolve([
+							"eat lunch",
+							"call doctor",
+							"buy books",
+							"create website",
+						]);
+					});
+				},
 			},
 			{
 				path: "/nouns",
 				element: <PageNouns />,
-				loader: nounLoader
+				loader: nounLoader,
 			},
 			{
 				path: "/about",
@@ -45,8 +51,12 @@ const router = createBrowserRouter([
 				element: <PageEmployees2 />,
 			},
 			{
+				path: "/employee/:id",
+				element: <PageEmployee />,
+			},
+			{
 				path: "/",
-				element: <Navigate to="/welcome"/>
+				element: <Navigate to="/welcome" />,
 			},
 		],
 	},

@@ -3,7 +3,7 @@
 	- no cache
 	- no 3x timeout error
 
-- .. refactor spinner in component
+- x refactor spinner in component
 
 - x create employees2 page with React Query
 	- good UX with spinner
