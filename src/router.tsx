@@ -5,6 +5,8 @@ import { PageWelcome } from "./pages/PageWelcome";
 import { Page404 } from "./pages/Page404";
 import { PageTodos } from "./pages/PageTodos";
 import { PageNouns, loader as nounLoader } from "./pages/PageNouns";
+import { PageEmployees1 } from "./pages/PageEmployees1";
+import { PageEmployees2 } from "./pages/PageEmployees2";
 
 const router = createBrowserRouter([
 	{
@@ -33,6 +35,14 @@ const router = createBrowserRouter([
 			{
 				path: "/about",
 				element: <PageAbout />,
+			},
+			{
+				path: "/employees1",
+				element: <PageEmployees1 />,
+			},
+			{
+				path: "/employees2",
+				element: <PageEmployees2 />,
 			},
 			{
 				path: "/",

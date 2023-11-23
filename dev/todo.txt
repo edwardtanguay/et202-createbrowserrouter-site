@@ -1,0 +1,14 @@
+- x nouns page with createBrowserRouter
+	- bad UX with spinner (bug)
+	- no cache
+	- no 3x timeout error
+
+- .. create employees1 page with useEffect spinner
+	- .. create employees1 page
+	- good UX with spinner
+	- no cache
+	- no 3x timeout error
+- create employees2 page with React Query
+	- good UX with spinner
+	- cache
+	- 3x timeout, returns error
