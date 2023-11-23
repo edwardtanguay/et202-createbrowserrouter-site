@@ -4,7 +4,7 @@ import { PageAbout } from "./pages/PageAbout";
 import { PageWelcome } from "./pages/PageWelcome";
 import { Page404 } from "./pages/Page404";
 import { PageTodos } from "./pages/PageTodos";
-import { PageNouns } from "./pages/PageNouns";
+import { PageNouns, loader as nounLoader } from "./pages/PageNouns";
 
 const router = createBrowserRouter([
 	{
@@ -28,6 +28,7 @@ const router = createBrowserRouter([
 			{
 				path: "/nouns",
 				element: <PageNouns />,
+				loader: nounLoader
 			},
 			{
 				path: "/about",
