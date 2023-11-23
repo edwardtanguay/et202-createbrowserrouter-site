@@ -3,6 +3,7 @@ import App from "./App";
 import { PageAbout } from "./pages/PageAbout";
 import { PageWelcome } from "./pages/PageWelcome";
 import { Page404 } from "./pages/Page404";
+import { PageTodos } from "./pages/PageTodos";
 
 const router = createBrowserRouter([
 	{
@@ -13,6 +14,15 @@ const router = createBrowserRouter([
 			{
 				path: "/welcome",
 				element: <PageWelcome />,
+			},
+			{
+				path: "/todos",
+				element: <PageTodos />,
+				// loader: async () => {
+				// 	return new Promise((resolve) => {
+				// 		resolve([111,222])
+				// 	})
+				// }
 			},
 			{
 				path: "/about",
