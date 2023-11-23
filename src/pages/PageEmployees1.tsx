@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { IEmployee } from "../interfaces";
 import axios from "axios";
-import React from "react";
 
 export const PageEmployees1 = () => {
 	const [employees, setEmployees] = useState<IEmployee[]>([]);
@@ -18,14 +17,20 @@ export const PageEmployees1 = () => {
 
 	return (
 		<>
-			<p>There are {employees.length} employees:</p>
-			{employees.map((employee) => {
-				return (
-					<p key={employee.employeeID}>
-						{employee.firstName} {employee.lastName}
-					</p>
-				);
-			})}
+			{employees.length !== 0 ? (
+				<>
+					<p>There are {employees.length} employees:</p>
+					{employees.map((employee) => {
+						return (
+							<p key={employee.employeeID}>
+								{employee.firstName} {employee.lastName}
+							</p>
+						);
+					})}
+				</>
+			) : (
+				<p>loading...</p>
+			)}
 		</>
 	);
 };
