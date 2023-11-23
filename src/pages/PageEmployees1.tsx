@@ -21,11 +21,9 @@ export const PageEmployees1 = () => {
 			<p>There are {employees.length} employees:</p>
 			{employees.map((employee) => {
 				return (
-					<React.Fragment key={employee.employeeID}>
-						<p>
-							{employee.firstName} {employee.lastName}
-						</p>
-					</React.Fragment>
+					<p key={employee.employeeID}>
+						{employee.firstName} {employee.lastName}
+					</p>
 				);
 			})}
 		</>
