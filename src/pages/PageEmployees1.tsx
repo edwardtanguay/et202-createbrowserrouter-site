@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { IEmployee } from "../interfaces";
 import axios from "axios";
+import React from "react";
 
 export const PageEmployees1 = () => {
 	const [employees, setEmployees] = useState<IEmployee[]>([]);
@@ -18,12 +19,14 @@ export const PageEmployees1 = () => {
 	return (
 		<>
 			<p>There are {employees.length} employees:</p>
-			{employees.map(employee => {
+			{employees.map((employee) => {
 				return (
-					<div key={employee.employeeID}>
-						<p>{employee.firstName} {employee.lastName}</p>
-					</div>
-				)
+					<React.Fragment key={employee.employeeID}>
+						<p>
+							{employee.firstName} {employee.lastName}
+						</p>
+					</React.Fragment>
+				);
 			})}
 		</>
 	);
